@@ -1,6 +1,6 @@
 nav.nav
-   a.nav__item.is-current(href='/') Home
-   a.nav__item(href='/pictures') Pictures
-   a.nav__item(href='/videos') Videos
-   a.nav__item(href='/kittenoftheday') kitten of the day
-   a.nav__item(href='/contacts') get in touch
+   a.nav__item(href='/', class=(menuActive === 'home' ? 'is-current' : '')) Home #{menuActive}
+   a.nav__item(href='/pictures', class=(menuActive === 'pictures' ? 'is-current' : '')) Pictures
+   a.nav__item(href='/videos', class=(menuActive === 'videos' ? 'is-current' : '')) Videos
+   a.nav__item(href='/kittenoftheday', class=(menuActive === 'kittenoftheday' ? 'is-current' : '')) kitten of the day
+   a.nav__item(href='/contacts', class=(menuActive === 'contacts' ? 'is-current' : '')) get in touch

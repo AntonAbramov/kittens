@@ -4,18 +4,20 @@ var appName = 'kittens';
 var username = 'root';
 var startFile = 'bin/www';
 
-var tmpDir = appName + '-' + new Date().getTime();
+var tmpDir = appName;
+//var tmpDir = appName + '-' + new Date().getTime();
 
 // configuration
 plan.target('staging', [
   {
-    host: '104.131.93.214',
+    host: '46.101.129.8',
     username: username,
+    privateKey: '/Users/antonabramov/.ssh/id_rsa',
     agent: process.env.SSH_AUTH_SOCK
   }
 ]);
 
-plan.target('production', [
+plan.target('prodaction', [
   {
     host: '46.101.129.8',
     username: username,

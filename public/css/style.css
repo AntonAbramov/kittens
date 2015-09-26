@@ -373,7 +373,7 @@ video {
   font-size: 55px;
   line-height: 1;
   letter-spacing: -5px;
-  margin: 0 0 5px; }
+  margin: 0 0 15px; }
 
 .title-small {
   color: #c4c4c4;
@@ -1794,7 +1794,7 @@ select {
   position: relative;
   background: #fafafa;
   padding: 15px;
-  margin: 100px 0 60px; }
+  margin: 100px 0; }
 
 .item-preview__inn {
   background: #fff;
@@ -1819,8 +1819,27 @@ select {
   bottom: 0; }
 
 .item-text {
-  margin: 20px 0 0;
-  display: block; }
+  margin: 30px 0 0;
+  display: block;
+  font-size: 30px;
+  color: #c4c4c4; }
+
+.price {
+  display: block;
+  line-height: 1;
+  font-weight: bold;
+  position: relative;
+  margin-top: 5px; }
+  .price .was {
+    font-size: 14px;
+    position: relative;
+    top: 0px;
+    left: -5px;
+    text-decoration: line-through;
+    color: #000; }
+  .price .now {
+    font-size: 24px;
+    color: red; }
 
 .bg-gray {
   background: #f6f6f6;
