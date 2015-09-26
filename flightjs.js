@@ -1,6 +1,6 @@
 var plan = require('flightplan');
 
-var appName = 'testNode';
+var appName = 'kittens';
 var username = 'root';
 var startFile = 'bin/server';
 
