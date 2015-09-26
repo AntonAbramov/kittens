@@ -1,0 +1,300 @@
+//$c-torquise: #6edcce;
+
+$bootstrap-sass-asset-helper: false !default;
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+// all colors we are using
+
+$gray:                   #c4c4c4 !default; //using
+$gray-dark:              #959595 !default; //using
+$gray-light:             #d7d7d7 !default; // using
+$gray-lighter:           #f0f0f0 !default; // using
+$border-color:           #e1e1e1;
+$button-gray:            #cdcdcd;
+$bg-gray:                #eaeaea;
+$bg-gray-dark:           #ccc;
+
+$brand-primary:         #6edcce !default;
+$brand-success:         #288778 !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
+$white:                 #fff;
+$black:                 #000;
+$green:                 #288778;
+$facebook-blue:         #346bad;
+
+// TODO: create a gray color palette with all shades of gray
+$text-color-secondary:  #898989;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #fff !default;
+//** Global text color on `<body>`.
+$text-color:            $black !default;
+
+//** Global textual link color.
+$link-color:            $black !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      $brand-primary !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+// Base spacing unit
+$base-spacing-unit:          20px;
+$base-spacing-unit--double:  $base-spacing-unit * 2;
+$base-spacing-unit--half:    $base-spacing-unit / 2;
+$base-spacing-unit--quarter: $base-spacing-unit / 4;
+
+//== Website Sizing
+$aside-filter-width: 25%;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:    "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$font-family-base:          GothamNarrowBook, "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-gotham-medium: GothamNarrowMedium, "Helvetica Neue", Arial, sans-serif;
+$font-family-gotham-bold:   GothamNarrowBold, "Helvetica Neue", Arial, sans-serif;
+
+$font-size-base:          14px;
+$font-size-large:         18px; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        $base-spacing-unit !default;
+$line-height-computed:    $line-height-base; // ~20px
+
+// Font sizes
+$font-size--miserable:    $font-size-base - 5; //9
+$font-size--tiny:         $font-size-base - 3; //11
+$font-size--small:        $font-size-base - 2; //12
+$font-size--base:         $font-size-base;     //14
+$font-size--big:          $font-size-base + 2; //16
+$font-size--large:        $font-size-base + 4; //18
+
+$heading-size-1:    24px;
+$heading-size-2:    20px;
+$heading-size-3:    16px;
+$heading-size-4:    14px;
+$heading-size-5:    12px;
+$heading-size-6:    12px;
+
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical:     4px !default;
+$padding-base-horizontal:   10px !default;
+
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  15px !default;
+
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
+
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$line-height-small:         1.5 !default;
+
+$border-radius-base:        0 /* 4px */ !default;
+$border-radius-large:       0 /* 6px */ !default;
+$border-radius-small:       0 /* 3px */ !default;
+
+//** Global color for active items (e.g., navs or dropdowns).
+$component-active-color:    #fff !default;
+//** Global background color for active items (e.g., navs or dropdowns).
+$component-active-bg:       $brand-primary !default;
+
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-font-weight:                normal !default;
+
+$btn-default-color:              #000 !default;
+$btn-default-bg:                 #fff !default;
+$btn-default-border:             #ccc !default;
+
+$btn-primary-color:              #fff !default;
+$btn-primary-bg:                 #35dcc7;
+$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+
+$btn-success-color:              #fff !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             darken($btn-success-bg, 5%) !default;
+
+$btn-info-color:                 #fff !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                darken($btn-info-bg, 5%) !default;
+
+$btn-warning-color:              #fff !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
+
+$btn-danger-color:               #fff !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+
+$btn-black-color:                #fff;
+$btn-black-bg:                   $black;
+$btn-black-border:               $black;
+
+$btn-link-disabled-color:        $gray-light !default;
+
+$cursor-disabled:                not-allowed !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius-base:         $border-radius-base !default;
+$btn-border-radius-large:        $border-radius-large !default;
+$btn-border-radius-small:        $border-radius-small !default;
+
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  1025px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         $base-spacing-unit !default;
+// Navbar collapse
+//** Point at which the menu becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Point at which the menu begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            (950px + $grid-gutter-width) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      $container-desktop /* (1140px + $grid-gutter-width) */ !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+
+
+$angleSide : -65deg;
+$angleProduct : 10deg;
+
+
+//== Forms
+//
+//##
+
+//** `<input>` background color
+$input-bg:                       #fff !default;
+//** `<input disabled>` background color
+$input-bg-disabled:              $gray-lighter !default;
+
+//** Text color for `<input>`s
+$input-color:                    $gray !default;
+//** `<input>` border color
+$input-border:                   #E1E1E1 !default;
+
+// TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
+//** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+$input-border-radius:            0 /* $border-radius-base */ !default;
+//** Large `.form-control` border radius
+$input-border-radius-large:      0 /* $border-radius-large */ !default;
+//** Small `.form-control` border radius
+$input-border-radius-small:      0 /* $border-radius-small */ !default;
+
+//** Border color for inputs on focus
+$input-border-focus:             #66afe9 !default;
+
+//** Placeholder text color
+$input-color-placeholder:        #959595 !default;
+
+//** Default `.form-control` height
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+//** Large `.form-control` height
+$input-height-large:             (ceil($font-size-base) + ($padding-large-vertical * 2) + 6) !default;
+//** Small `.form-control` height
+$input-height-small:             (floor($font-size-small) + ($padding-small-vertical * 2) + 2) !default;
+
+//** `.form-group` margin
+$form-group-margin-bottom:       15px !default;
+
+$legend-color:                   $gray /* $gray-dark */ !default;
+$legend-border-color:            #e5e5e5 !default;
+
+//** Background color for textual input addons
+$input-group-addon-bg:           $gray-lighter !default;
+//** Border color for textual input addons
+$input-group-addon-border-color: $input-border !default;
+
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed !default;
+
+

@@ -1,0 +1,37 @@
+//
+// Select
+// ------------------------------------------------
+
+.select {
+  border: 1px solid $gray-light;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
+  &:after {
+    content: "";
+    border: 5px solid;
+    border-color: $black transparent transparent  transparent;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -2px;
+    z-index: 1;
+  }
+
+  select {
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+    border: none;
+    width: 115%;
+    height: 100%;
+    display: block;
+    padding: 4px 28% 4px 10px;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.select-label {
+  color: $gray-dark;
+}

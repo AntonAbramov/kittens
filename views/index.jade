@@ -1,0 +1,94 @@
+extends layout
+block header
+  #slides.slides
+    div.slides__box
+      span.slides__text--right Meaw... I'm Simba! <br> looking for a new home!
+      img(src='images/img3.jpg', alt='cat')
+    div.slides__box
+      span.slides__text--right This is my british brother
+      img(src='images/img4.jpg', alt='cat')
+    div.slides__box
+      span.slides__text--left Our sister Monika <br>
+        small.pull-right 'scotish fold'
+      img(src='images/img1.jpg', alt='cat')
+    div.slides__box
+      img(src='images/img2.jpg', alt='cat')
+    div.slides__box
+      span.slides__text--mid Meaw... Meaw... We like to play!
+      img(src='images/img5.jpg', alt='cat')
+    div.slides__box
+      span.slides__text--right ...zzzzzz and sleep :)
+      img(src='images/img6.jpg', alt='cat')
+
+block content
+  //video#bgvid(autoplay='', poster='https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg', loop='')
+    // WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button
+    source(src='//demosthenes.info/assets/videos/polina.webm', type='video/webm')
+    source(src='//demosthenes.info/assets/videos/polina.mp4', type='video/mp4')
+  div.home
+    h1.title.text-center Welcome to our page
+    h2.title-small.text-center We raise & sell over 80 kittens
+    p Welcome to #{title}
+
+    .container
+      .row
+        .col-xs-6.col-sm-3
+          a.item-preview(href="/kittens/gray")
+            .item-preview__inn
+              .item-preview__box: img.item-preview__img(src="images/cat1.png", alt="")
+            strong.item-text Small
+              small.text-upper breeds
+        .col-xs-6.col-sm-3
+          a.item-preview(href="/kittens/simba")
+            .item-preview__inn
+              .item-preview__box: img.item-preview__img(src="images/cat2.png", alt="")
+            strong.item-text Small
+              small.text-upper breeds
+        .col-xs-6.col-sm-3
+          a.item-preview(href="/kittens/monika")
+            .item-preview__inn
+              .item-preview__box: img.item-preview__img(src="images/cat3.png", alt="")
+            strong.item-text Small
+              small.text-upper breeds
+        .col-xs-6.col-sm-3
+          a.item-preview(href="/kittens/big")
+            .item-preview__inn
+              .item-preview__box: img.item-preview__img(src="images/cat4.png", alt="")
+            strong.item-text Small
+              small.text-upper breeds
+    .bg-gray
+      .container
+        h2.text-center.s30 Our kittens were born on 30.07.
+        p.text-center about kittens descriptions
+        h2.text-center.s24 Gallary of our kittens
+        div.row
+          div.col-xs-6
+            a.fancybox(rel='gallery1', href='images/all/kittens-for-sale-1.jpg', title='Sgwd Ddwli Uchaf, Brecon Waterfalls (technodean2000)')
+              img(src='images/all/thumbs/kittens-for-sale-1.jpg', echo-data="", alt='')
+          div.col-xs-6
+            a.fancybox(rel='gallery1', href='images/all/kittens-for-sale-2.jpg', title='Sgwd Ddwli Uchaf, Brecon Waterfalls (technodean2000)')
+              img(src='images/all/thumbs/kittens-for-sale-2.jpg', echo-data="", alt='')
+          div.col-xs-6
+            a.fancybox(rel='gallery1', href='images/all/kittens-for-sale-3.jpg', title='Sgwd Ddwli Uchaf, Brecon Waterfalls (technodean2000)')
+              img(src='images/all/thumbs/kittens-for-sale-3.jpg', echo-data="", alt='')
+          div.col-xs-6
+            a.fancybox(rel='gallery1', href='images/all/kittens-for-sale-4.jpg', title='Sgwd Ddwli Uchaf, Brecon Waterfalls (technodean2000)')
+              img(src='images/all/thumbs/kittens-for-sale-4.jpg', echo-data="", alt='')
+          div.col-xs-6
+            a.fancybox(rel='gallery1', href='images/all/kittens-for-sale-5.jpg', title='Sgwd Ddwli Uchaf, Brecon Waterfalls (technodean2000)')
+              img(src='images/all/thumbs/kittens-for-sale-5.jpg', echo-data="", alt='')
+          div.col-xs-6
+            a.fancybox(rel='gallery1', href='images/all/kittens-for-sale-6.jpg', title='Sgwd Ddwli Uchaf, Brecon Waterfalls (technodean2000)')
+              img(src='images/all/thumbs/kittens-for-sale-6.jpg', echo-data="", alt='')
+          div.col-xs-6
+            a.fancybox(rel='gallery1', href='images/all/kittens-for-sale-7.jpg', title='Sgwd Ddwli Uchaf, Brecon Waterfalls (technodean2000)')
+              img(src='images/all/thumbs/kittens-for-sale-7.jpg', echo-data="", alt='')
+          div.col-xs-6
+            a.fancybox(rel='gallery1', href='images/all/kittens-for-sale-8.jpg', title='Sgwd Ddwli Uchaf, Brecon Waterfalls (technodean2000)')
+              img(src='images/all/thumbs/kittens-for-sale-8.jpg', echo-data="", alt='')
+          div.col-xs-6
+            a.fancybox(rel='gallery1', href='images/all/kittens-for-sale-9.jpg', title='Sgwd Ddwli Uchaf, Brecon Waterfalls (technodean2000)')
+              img(src='images/all/thumbs/kittens-for-sale-9.jpg', echo-data="", alt='')
+          div.col-xs-6
+            a.fancybox(rel='gallery1', href='images/all/kittens-for-sale-10.jpg', title='Sgwd Ddwli Uchaf, Brecon Waterfalls (technodean2000)')
+              img(src='images/all/thumbs/kittens-for-sale-10.jpg', echo-data="", alt='')

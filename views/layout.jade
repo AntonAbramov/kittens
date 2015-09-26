@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    block header
+    include ./includes/nav.jade
+    block content
+    block footer
+      .container
+        .text-center email: sale@kitensforsale.com tel: +473423424 <br> All copyright 2015
+
+    script(src='/bower_components/jquery/dist/jquery.min.js')
+    script(src='/javascripts/libs/jquery.slides.min.js')
+    script(src='/javascripts/libs/jquery.fancybox.pack.js')
+    script(src='/javascripts/libs/echo.min.js')
+    script(src='/javascripts/init.js')
+

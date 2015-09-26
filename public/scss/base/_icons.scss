@@ -1,0 +1,38 @@
+@import "sprite";
+
+.sprite-icon {
+  display: inline-block;
+}
+
+[data-icon]:before {
+  content: attr(data-icon);
+}
+.icon-juniqe:before,
+[data-icon]:before,
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "juniqe";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-right:before {
+  content: "a";
+}
+.icon-angle-left:before {
+  content: "b";
+}
+
+.icon-chevron-left:before {
+  content: "c";
+}
+
+.icon-chevron-right:before {
+  content: "d";
+}

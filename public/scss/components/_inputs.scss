@@ -1,0 +1,88 @@
+input,
+select {
+  background: $white;
+  border-radius: $border-radius-base;
+  border: 1px solid $border-color;
+  color: $black
+}
+
+input {
+  // height = 30px: 20px(line-height) + 8px (padding) + 2px(border)
+  padding: 10px;
+  line-height: 20px;
+  &.validation-failed {
+    border-color: #ff0000;
+  }
+  &.validation-passed {
+    //border-color: green;
+  }
+  &:focus {
+    border-color: $link-hover-color;
+  }
+  &[type='radio']:focus,
+  &[type='checkbox']:focus {
+    box-shadow: 0 0 3px rgba(0,0,0, .2);
+  }
+}
+
+select {
+  padding: 4px;
+  height: 30px;
+}
+
+.jnq-field {
+  margin: 0 0 $base-spacing-unit;
+  @extend .cf;
+  font-size: $font-size--small;
+  input, select {
+    font-size: $font-size--base;
+  }
+}
+
+.jnq-field--separator {
+  margin: 0 -10px 20px;
+  border-bottom: 1px solid $border-color;
+  padding: 0 10px 20px;
+}
+
+.jnq-field__label {
+  display: none;
+}
+
+.jnq-field__controll {
+  position: relative;
+  @extend .cf;
+  input[type='text'],
+  input[type='password'],
+  input[type='search'],
+  input[type='email'] {
+    width: 100%;
+    display: block;
+    &.is-hidden {
+      display: none;
+    }
+  }
+}
+
+.jnq-field__checkbox {
+  padding: 0 0 0 30px;
+  position: relative;
+  display: block;
+  line-height: 14px;
+  .checkbox {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.container-select--full {
+  select {
+    width: 100%;
+  }
+}
+
+//need to do it separetly, we can not define it with comma
+::-webkit-input-placeholder { color: $gray-dark; }
+:-moz-placeholder           { color: $gray-dark; }
+::-moz-placeholder          { color: $gray-dark; }
+:-ms-input-placeholder      { color: $gray-dark; }
