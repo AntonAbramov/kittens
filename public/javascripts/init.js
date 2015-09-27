@@ -37,4 +37,26 @@ $(document).ready(function () {
     }
   });
 
+  $('#contacts').on('submit', function (e) {
+    e.preventDefault();
+    var form = $('#contacts')
+    var data = form.serialize();
+    $.ajax({
+      type: 'POST',
+      url: '/contacts/send',
+      data: data
+    }).done(function (res) {
+      if (res === 'success') {
+        form.fadeOut(function () {
+          form.html('Meaw... Thanks for your quesiton. \n We will answer today! ')
+          form.fadeIn()
+        });
+
+      } else {
+        form.prepend('Opps something wend wrong');
+      }
+    })
+
+  })
+
 });

@@ -1,12 +1,14 @@
 input,
-select {
+select,
+textarea {
   background: $white;
-  border-radius: $border-radius-base;
+  border-radius: 5px;
   border: 1px solid $border-color;
-  color: $black
+  color: $black;
+  @include transition(all, .3s);
 }
 
-input {
+input, textarea {
   // height = 30px: 20px(line-height) + 8px (padding) + 2px(border)
   padding: 10px;
   line-height: 20px;
@@ -17,7 +19,7 @@ input {
     //border-color: green;
   }
   &:focus {
-    border-color: $link-hover-color;
+    box-shadow: 0 0 2px rgba(0,0,0, .2);
   }
   &[type='radio']:focus,
   &[type='checkbox']:focus {
@@ -46,21 +48,32 @@ select {
 }
 
 .jnq-field__label {
-  display: none;
+  display: inline-block;
+  width: 20%;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 10px;
 }
 
 .jnq-field__controll {
+  width: 50%;
   position: relative;
+  display: inline-block;
   @extend .cf;
   input[type='text'],
   input[type='password'],
   input[type='search'],
-  input[type='email'] {
+  input[type='email'],
+  textarea{
     width: 100%;
     display: block;
     &.is-hidden {
       display: none;
     }
+  }
+  textarea {
+    resize: none;
+    height: 150px;
   }
 }
 
@@ -86,3 +99,16 @@ select {
 :-moz-placeholder           { color: $gray-dark; }
 ::-moz-placeholder          { color: $gray-dark; }
 :-ms-input-placeholder      { color: $gray-dark; }
+
+
+.sbm {
+  width: 40%;
+  &:hover {
+    border-color: darken($border-color, 10%);
+    background: #f9f9f9;
+
+  }
+  &:active {
+    box-shadow: 0 0 6px rgba(0,0,0, .2) inset;
+  }
+}

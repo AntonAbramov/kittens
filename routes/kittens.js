@@ -14,8 +14,8 @@ router.get('/gray', function(req, res, next) {
   res.render('kittens/gray', { title: 'Gray' });
 });
 
-router.get('/monika', function(req, res, next) {
-  res.render('kittens/monika', { title: 'Monika' });
+router.get('/monica', function(req, res, next) {
+  res.render('kittens/monica', { title: 'monica' });
 });
 
 router.get('/big', function(req, res, next) {

@@ -370,10 +370,11 @@ video {
 .title {
   color: #c4c4c4;
   font-weight: 700;
-  font-size: 55px;
+  font-size: 40px;
   line-height: 1;
-  letter-spacing: -5px;
-  margin: 0 0 15px; }
+  letter-spacing: 1px;
+  margin: 0 0 15px;
+  text-transform: uppercase; }
 
 .title-small {
   color: #c4c4c4;
@@ -382,6 +383,9 @@ video {
 
 .color-gray {
   color: #c4c4c4; }
+
+.content {
+  padding: 30px 0; }
 
 .container {
   max-width: 1025px;
@@ -1392,22 +1396,29 @@ input[type="button"].btn-block {
     top: 12px; }
 
 input,
-select {
+select,
+textarea {
   background: #fff;
-  -webkit-border-radius: 0;
-  border-radius: 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   border: 1px solid #e1e1e1;
-  color: #000; }
+  color: #000;
+  -webkit-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -moz-transition: all, 0.3s;
+  transition: all, 0.3s; }
 
-input {
+input, textarea {
   padding: 10px;
   line-height: 20px; }
-  input.validation-failed {
+  input.validation-failed, textarea.validation-failed {
     border-color: #ff0000; }
-  input:focus {
-    border-color: #6edcce; }
+  input:focus, textarea:focus {
+    -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2); }
   input[type='radio']:focus,
-  input[type='checkbox']:focus {
+  input[type='checkbox']:focus, textarea[type='radio']:focus,
+  textarea[type='checkbox']:focus {
     -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2); }
 
@@ -1427,21 +1438,32 @@ select {
   padding: 0 10px 20px; }
 
 .jnq-field__label {
-  display: none; }
+  display: inline-block;
+  width: 20%;
+  vertical-align: middle;
+  text-align: right;
+  padding-right: 10px; }
 
 .jnq-field__controll {
-  position: relative; }
+  width: 50%;
+  position: relative;
+  display: inline-block; }
   .jnq-field__controll input[type='text'],
   .jnq-field__controll input[type='password'],
   .jnq-field__controll input[type='search'],
-  .jnq-field__controll input[type='email'] {
+  .jnq-field__controll input[type='email'],
+  .jnq-field__controll textarea {
     width: 100%;
     display: block; }
     .jnq-field__controll input[type='text'].is-hidden,
     .jnq-field__controll input[type='password'].is-hidden,
     .jnq-field__controll input[type='search'].is-hidden,
-    .jnq-field__controll input[type='email'].is-hidden {
+    .jnq-field__controll input[type='email'].is-hidden,
+    .jnq-field__controll textarea.is-hidden {
       display: none; }
+  .jnq-field__controll textarea {
+    resize: none;
+    height: 150px; }
 
 .jnq-field__checkbox {
   padding: 0 0 0 30px;
@@ -1467,11 +1489,21 @@ select {
 :-ms-input-placeholder {
   color: #959595; }
 
+.sbm {
+  width: 40%; }
+  .sbm:hover {
+    border-color: #c8c8c8;
+    background: #f9f9f9; }
+  .sbm:active {
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset; }
+
 .nav {
   background: #fcfcfc;
   text-align: center;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); }
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  position: relative; }
 
 .nav__item {
   display: inline-block;
@@ -1485,6 +1517,13 @@ select {
   .nav__item.is-current {
     color: #3d3d3d;
     cursor: default; }
+
+.nav__email {
+  position: absolute;
+  right: 20px;
+  top: 20px; }
+  .nav__email:hover, .nav__email:focus {
+    color: #000; }
 
 .slides {
   position: relative; }
@@ -1532,7 +1571,9 @@ select {
   position: absolute;
   top: 100px;
   line-height: 1;
-  color: #fff; }
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  font-style: italic; }
   .slides__text--left small,
   .slides__text--right small,
   .slides__text--mid small {
@@ -1647,7 +1688,7 @@ select {
   height: 100%;
   cursor: pointer;
   text-decoration: none;
-  background: transparent url("blank.gif");
+  background: transparent url("../images/fancy/blank.gif");
   /* helps IE */
   -webkit-tap-highlight-color: transparent;
   z-index: 8040; }
@@ -1795,6 +1836,15 @@ select {
   background: #fafafa;
   padding: 15px;
   margin: 100px 0; }
+  .item-preview:hover .item-preview__img, .item-preview:focus .item-preview__img {
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    transform: scale(1.03);
+    bottom: 5px; }
+  .item-preview:hover .item-text, .item-preview:focus .item-text {
+    text-decoration: underline; }
 
 .item-preview__inn {
   background: #fff;
@@ -1816,7 +1866,11 @@ select {
   border-radius: 0 0 250px 250px;
   position: absolute;
   left: 0;
-  bottom: 0; }
+  bottom: 0;
+  -webkit-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -moz-transition: all, 0.3s;
+  transition: all, 0.3s; }
 
 .item-text {
   margin: 30px 0 0;
@@ -1852,6 +1906,19 @@ select {
       display: block;
       -webkit-border-radius: 10px;
       border-radius: 10px; }
+
+.day-pic {
+  position: relative; }
+
+.day-pic__text {
+  position: absolute;
+  right: 10%;
+  top: 60px;
+  font-size: 16px; }
+  .day-pic__text a {
+    font-weight: bold; }
+    .day-pic__text a:hover, .day-pic__text a:focus {
+      color: #000; }
 
 .pt10 {
   padding-top: 10px; }

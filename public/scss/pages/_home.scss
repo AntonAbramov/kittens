@@ -12,6 +12,15 @@
   background: #fafafa;
   padding: 15px;
   margin: 100px 0;
+  &:hover, &:focus {
+    .item-preview__img {
+      transform: scale(1.03);
+      bottom: 5px;
+    }
+    .item-text {
+      text-decoration: underline;
+    }
+  }
 }
 
 .item-preview__inn {
@@ -34,6 +43,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
+  @include transition(all, .3s);
 }
 
 .item-text {

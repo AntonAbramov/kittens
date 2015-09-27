@@ -1,0 +1,16 @@
+﻿.day-pic {
+  position: relative;
+
+}
+.day-pic__text {
+  position: absolute;
+  right: 10%;
+  top: 60px;
+  font-size: 16px;
+  a {
+    font-weight: bold;
+    &:hover, &:focus {
+      color: #000;
+    }
+  }
+}

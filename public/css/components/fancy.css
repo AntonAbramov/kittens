@@ -96,7 +96,7 @@
   height: 100%;
   cursor: pointer;
   text-decoration: none;
-  background: transparent url("blank.gif");
+  background: transparent url("../images/fancy/blank.gif");
   /* helps IE */
   -webkit-tap-highlight-color: transparent;
   z-index: 8040; }

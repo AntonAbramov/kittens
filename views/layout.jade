@@ -1,16 +1,34 @@
 doctype html
 html
   head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
     title= title
+    meta(name='keywords', content="Scottish kittens for sale, for sale kittens, Berlin sale kitten, berlin kaufen katze, kaufen katze, scottish fold kaufen, Exclusive kittens sell")
+    meta(name='description', content="Exclusive Scottish fold kittens in Berlin, they are just 2 mounths old! Kittens looking for a new Home!")
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300', rel='stylesheet', type='text/css')
     link(rel='stylesheet', href='/css/style.css')
   body
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-55262919-4', 'auto');
+      ga('send', 'pageview');
     block header
     include ./includes/nav.jade
     block content
     block footer
       .container
-        .text-center email: sale@kitensforsale.com tel: +473423424 <br> All copyright 2015
+        .text-center If you have any questions, please write an email:&nbsp;
+          a.link--underlined( href="mailto:scotishkitten@gmail.com") scotishkitten@gmail.com
+          |&nbsp;or fill a contact&nbsp;
+          a.link--underlined(href='/contacts') <strong>form</strong>
+          //a(href="tel:003423424") &nbsp;tel: +473423424
+          br
+          //|All copyright 2015
+        br
 
     script(src='/bower_components/jquery/dist/jquery.min.js')
     script(src='/javascripts/libs/jquery.slides.min.js')

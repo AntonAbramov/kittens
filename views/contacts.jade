@@ -1,5 +1,27 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    .content
+      form(action="contact-form", method="POST", id="contacts")
+        div.jnq-field
+          label.jnq-field__label Subject
+            sup *
+          input.jnq-field__controll(type="text", name='subject', required, placeholder="Please write a title")
+        div.jnq-field
+          label.jnq-field__label Name
+            sup *
+          input.jnq-field__controll(type="text", name='name', required, placeholder="Fill your name")
+        div.jnq-field
+          label.jnq-field__label Email
+            sup *
+          input.jnq-field__controll(type="email", name='email', required, placeholder="Email")
+        div.jnq-field
+          label.jnq-field__label.v-top text
+          .jnq-field__controll
+            textarea(name='msg')
+        div.jnq-field
+          label.jnq-field__label.v-top &nbsp;
+          .jnq-field__controll
+            input.sbm(type="submit", value="send")
+
