@@ -1,0 +1,33 @@
+{
+  /**
+   * Application configuration section
+   * http://pm2.keymetrics.io/docs/usage/application-declaration/
+   */
+  "apps": [
+    // First application
+    {
+      "name": "kittens",
+      "script": "bin/www.js",
+      "env": {
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  /**
+   * Deployment section
+   * http://pm2.keymetrics.io/docs/usage/deployment/
+   */
+  "deploy": {
+    "production": {
+      "user": "root",
+      "host": "46.101.129.8",
+      "ref": "origin/master",
+      "repo": "git@github.com:AntonAbramov/kittens.git",
+      "path": "/root/kittens/",
+      "post-deploy": "npm install ; pm2 startOrRestart ecosystem.json --env production"
+    }
+  }
+}
